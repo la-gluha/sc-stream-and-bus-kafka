@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: bus-listener
+  kafka:
+    bootstrap-servers: 172.16.0.191:34991
+  cloud:
+    bus:
+      ack:
+        enabled: true
+        destination: springCloudBus
+server:
+  port: ${random.int[10000,19999]}

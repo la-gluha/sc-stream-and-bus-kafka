@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: bus-publisher
+  kafka:
+    bootstrap-servers: 172.16.0.191:34991
+  cloud:
+    bus:
+      ack:
+        enabled: true
+        destination: springCloudBus
+server:
+  port: 20000

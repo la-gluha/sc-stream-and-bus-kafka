@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: kafka-consumer
+  cloud:
+    stream:
+      bindings:
+        stream-demo-input:
+          destination: STREAM_DEMO_TOPIC
+          content-type: application/json
+          group: stream-consumer-group
+      kafka:
+        binder:
+          brokers: 172.16.0.191:34991
+server:
+  port: ${random.int[10000,19999]}
